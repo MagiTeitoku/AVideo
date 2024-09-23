@@ -111,7 +111,7 @@ COPY deploy/apache/crontab /etc/cron.d/crontab
 
 RUN if [ "$SERVER_NAME" != "localhost" ] || [[ "$SERVER_NAME" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]] ; \
     then \
-        cp /etc/apache2/sites-available/avideo.conf /etc/apache2/sites-enabled/000-default.conf; \
+        cp /etc/apache2/sites-available/localhost.conf /etc/apache2/sites-enabled/000-default.conf; \
     else \
         cp /etc/apache2/sites-available/localhost.conf /etc/apache2/sites-enabled/000-default.conf; \
     fi
